@@ -1,0 +1,51 @@
+{
+  "name": "lasa-ect",
+  "version": "0.0.1",
+  "private": true,
+  "description": "O Site oficial do laborátiorio LASA (Laborátiorio de Soluções Ambientais) da Escola de Ciências & Tecnologia da UFRN.",
+  "keywords": [
+    "Next.js",
+    "TypeScript",
+    "Tailwind",
+    "Sanity",
+    "Bio",
+    "Nature",
+    "UFRN"
+  ],
+  "homepage": "https://github.com/felipe-sbm/lasa#readme",
+  "bugs": {
+    "url": "https://github.com/felipe-sbm/lasa/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipe-sbm/lasa.git"
+  },
+  "license": "MIT",
+  "author": "Felipe SBM",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@portabletext/react": "^3.2.1",
+    "@sanity/client": "^7.5.0",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
