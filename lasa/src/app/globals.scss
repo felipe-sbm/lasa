@@ -12,12 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Modo escuro desativado temporariamente (UI não concluída)
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   background: var(--background);
