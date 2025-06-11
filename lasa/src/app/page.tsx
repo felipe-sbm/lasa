@@ -18,32 +18,8 @@ export default async function HomePage() {
 
   return (
     <main className="relative p-6 min-h-screen">
-      <div className="absolute inset-0 -z-10 bg-[url('/background.webp')] bg-cover bg-center opacity-20"></div>
       <div className="max-w-5xl mx-auto">
-      <section className="bg-gradient-to-r from-blue-100 to-green-100 rounded-xl shadow mb-10 p-8 flex flex-col md:flex-row items-center gap-8">
-        <div className="flex-1">
-          <h1 className="text-4xl font-extrabold text-blue-900 mb-4">Laboratório de Soluções Ambientais</h1>
-          <p className="text-lg text-gray-700 mb-4">
-            Bem-vindo ao site oficial do LASA! Aqui você encontra informações sobre nossos projetos, pesquisas, equipe e novidades do laboratório.
-          </p>
-          <ul className="list-disc pl-5 text-gray-600 mb-4">
-            <li>Projetos em sustentabilidade</li>
-            <li>Desenvolvimento de pesquisas</li>
-            <li>Eventos, publicações e muito mais</li>
-          </ul>
-          <Link href="/sobre" className="inline-block mt-2 px-6 py-2 bg-blue-900 text-white rounded-lg font-semibold shadow hover:bg-blue-900/75 transition">
-            Saiba mais sobre o LASA
-          </Link>
-        </div>
-        <div className="flex-1 flex justify-center">
-          <Image
-            src="/lasa.svg"
-            alt="Laboratório"
-            width={350}
-            height={220}
-          />
-        </div>
-      </section>
+    
 
       {latestPost && (
         <section className="mb-12">
