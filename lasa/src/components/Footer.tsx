@@ -41,14 +41,14 @@ function Footer() {
                 Email
                 </label>
                 <input
-                className="w-full rounded-full border border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-lime-600"
+                className="w-full border border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-lime-600"
                 id="email"
                 type="email"
                 placeholder="seu@email.com.br"
                 />
                 <button
                 type="submit"
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-lime-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-lime-700"
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-lime-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-lime-700"
                 >
                 Inscrever-se
                 </button>
@@ -67,7 +67,7 @@ function Footer() {
               href="https://github.com/otsuki-dev"
               className="text-gray-700 underline transition hover:text-fuchsia-700/75"
             >
-              Otsuki
+              Otsuki.dev
             </Link>
             .
           </p>

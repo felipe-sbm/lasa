@@ -12,10 +12,12 @@ async function getPostBySlug(slug: string) {
   return client.fetch(`*[_type == "post" && slug.current == $slug][0]`, { slug });
 }
 
-export default async function PostPage(props: {
-  params: { slug: string };
-}) {
-  const { slug } = await props.params;
+type PageProps = {
+  params: { slug: string }
+}
+
+export default async function PostPage({ params }: PageProps) {
+  const { slug } = params;
 
   const post = await getPostBySlug(slug);
 
