@@ -9,7 +9,7 @@ export default function PostLayout({
   return (
     <>
       <Head>
-        <meta property="fb:app_id" content="1417721672739686" />
+        <meta property="fb:app_id" content="6650706508671478711" />
       </Head>
       <main className="max-w-3xl mx-auto px-4 py-8">
         <div className="prose prose-lg dark:prose-invert">

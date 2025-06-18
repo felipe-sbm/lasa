@@ -1,11 +1,13 @@
 @use "tailwindcss";
 
+$lasa: #004c20;
+$dm-serif-display: "DM Serif Display", serif;
+$dm-sans: "DM Serif Text", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
-
-@theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -17,6 +19,7 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --font-mono: 'Droid Sans Mono', 'monospace', monospace;
   }
 }
 */
@@ -24,5 +27,63 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: $dm-sans;
+
+  .bg-lasa {
+    background-color: $lasa !important;
+    color: #fff;
+  }
+
+  .title-lasa {
+    color: $lasa;
+    font-family: $dm-serif-display;
+  }
+  .text-lasa {
+    color: $lasa;
+    font-family: $dm-sans;
+  }
+
+  #button-primary {
+    color: $lasa;
+    text-decoration: underline;
+    background-color: white;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: white;
+      background-color: transparent;
+      border: white 1px solid;
+    }
+  }
+  
+  #button-secondary {
+    color: white;
+    text-decoration: underline;
+    background-color: $lasa;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: $lasa;
+      background-color: transparent;
+      border: $lasa 1px solid;
+    }
+  }
+}
+
+.header {
+  font-family: $dm-serif-display;
+
+  Link:hover {
+    color: $lasa;
+  }
+
+  #top-bar {
+    font-family: $open-sans;
+    background-color: #f1f1f1;
+    border: #606060 1px solid;
+
+    Link {
+      border-right: #606060 1px solid;
+    }
+  }
 }

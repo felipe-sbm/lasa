@@ -18,10 +18,11 @@ function Footer() {
 
             <div className="mt-6 flex justify-center gap-4 lg:justify-start">
               <Link
-                className="text-gray-700 transition hover:text-lime-700/75"
+                className="text-black transition hover:text-green-700"
                 href="#"
                 target="_blank"
                 rel="noreferrer"
+                title="Instagram do laboratório"
               >
                 <span className="sr-only"> Instagram </span>
                 <Instagram className="size-6" />
@@ -48,7 +49,8 @@ function Footer() {
                 />
                 <button
                 type="submit"
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-lime-600 px-5 py-2 text-sm font-medium text-white transition hover:bg-lime-700"
+                id="button-secondary"
+                className="absolute right-2 top-1/2 -translate-y-1/2 px-5 py-2 text-sm font-medium text-white transition hover:bg-lime-700"
                 >
                 Inscrever-se
                 </button>

@@ -1,4 +1,4 @@
-import { getPosts } from "@/lib/api";
+import { getPosts } from "@/lib/blogger";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,64 +18,66 @@ export default async function HomePage() {
 
   return (
     <main className="relative p-6 min-h-screen">
-       <section>
-          <div className="mx-auto pb-5">
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-              <div className="bg-lime-700 p-8 md:p-12 lg:px-16 lg:py-24">
-                <div className="flex items-center justify-center h-full min-h-[300px]">
-                  <div className="mx-auto max-w-xl text-center">
-                    <h2 className="text-2xl font-bold text-white md:text-3xl">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit
-                    </h2>
+      <section>
+        <div className="mx-auto pb-5">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="bg-lasa p-8 md:p-12 lg:px-16 lg:py-24">
+              <div className="flex items-center justify-center h-full min-h-[300px]">
+                <div className="mx-auto max-w-xl text-center">
+                  <h2 className="text-2xl font-bold text-white md:text-3xl">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit
+                  </h2>
 
-                    <p className="hidden text-white/90 sm:mt-4 sm:block">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
-                      egestas tempus tellus etiam sed. Quam a scelerisque amet
-                      ullamcorper eu enim et fermentum, augue. Aliquet amet
-                      volutpat quisque ut interdum tincidunt duis.
-                    </p>
+                  <p className="hidden text-white/90 sm:mt-4 sm:block">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+                    egestas tempus tellus etiam sed. Quam a scelerisque amet
+                    ullamcorper eu enim et fermentum, augue. Aliquet amet
+                    volutpat quisque ut interdum tincidunt duis.
+                  </p>
 
-                    <div className="mt-4 md:mt-8">
-                      <Link
-                        href="/posts"
-                        className="inline-block border border-white bg-white px-12 py-3 text-sm font-medium text-lime-700 transition hover:bg-transparent hover:text-white focus:ring-3 focus:ring-lime-500 focus:outline-hidden focus:bg-transparent focus:text-white"
-                      >
-                        Ver publicações
-                      </Link>
-                    </div>
+                  <div className="mt-4 md:mt-8">
+                    <Link
+                      href="/posts"
+                      id="button-primary"
+                      className="inline-block border px-12 py-3 text-sm font-medium focus:ring-3 focus:ring-green-700 focus:outline-hidden focus:text-white"
+                    >
+                      Ver publicações
+                    </Link>
                   </div>
                 </div>
               </div>
+            </div>
 
-              <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
-                <Image
-                  alt="Folhas de árvores"
-                  src="https://images.pexels.com/photos/1459495/pexels-photo-1459495.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="h-40 w-full object-cover sm:h-56 md:h-full"
-                  height={600}
-                  width={400}
-                />
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
+              <Image
+                alt="Folhas de árvores"
+                src="https://images.pexels.com/photos/1459495/pexels-photo-1459495.jpeg?auto=compress&cs=tinysrgb&w=600"
+                className="h-40 w-full object-cover sm:h-56 md:h-full"
+                height={600}
+                width={400}
+              />
 
-                <Image
-                  alt="Uma floresta densa"
-                  src="https://images.pexels.com/photos/19289108/pexels-photo-19289108/free-photo-of-close-up-of-capybaras-lying-on-the-grass.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="h-40 w-full object-cover sm:h-56 md:h-full"
-                  height={600}
-                  width={400}
-                />
-              </div>
+              <Image
+                alt="Uma floresta densa"
+                src="https://images.pexels.com/photos/19289108/pexels-photo-19289108/free-photo-of-close-up-of-capybaras-lying-on-the-grass.jpeg?auto=compress&cs=tinysrgb&w=600"
+                className="h-40 w-full object-cover sm:h-56 md:h-full"
+                height={600}
+                width={400}
+              />
             </div>
           </div>
-        </section>
-      <div className="max-w-5xl mx-auto">
+        </div>
+      </section>
 
+      <div className="max-w-5xl mx-auto">
         {latestPost && (
           <section className="mb-12">
-            <h2 className="text-2xl font-bold mb-4 text-blue-800">
-              Última publicação do blog
+            <h2 className="text-2xl font-bold mb-1 title-lasa">
+              Confira nossas últimas publicações do blog
             </h2>
+            <p className="mb-4">Todas elas e muitas outras estão disponíveis no nosso blog, acesse a página pelo cabeçálho.</p>
             <Link
-              href={`/posts/${latestPost.slug.current}`}
+              href={`/posts/${latestPost.id}`}
               className="block bg-white border border-gray-200 shadow-lg hover:shadow-xl transition overflow-hidden"
             >
               <div className="md:flex">
@@ -113,7 +115,7 @@ export default async function HomePage() {
 
         {otherPosts.length > 0 && (
           <section>
-            <h2 className="text-2xl font-bold mb-4 text-blue-800">
+            <h2 className="text-2xl font-bold mb-4 title-lasa">
               Outras publicações
             </h2>
             <div className="overflow-x-auto pb-2">
@@ -121,10 +123,10 @@ export default async function HomePage() {
                 {otherPosts.map((post: Post) => (
                   <Link
                     key={post._id}
-                    href={`/posts/${post.slug.current}`}
-                    className="min-w-[260px] max-w-xs bg-white rounded-lg shadow hover:shadow-lg transition flex-shrink-0"
+                    href={`/posts/${post._id}`}
+                    className="min-w-[260px] max-w-xs bg-white shadow hover:shadow-lg transition flex-shrink-0"
                   >
-                    <div className="h-40 w-full bg-gray-100 rounded-t-lg overflow-hidden flex items-center justify-center">
+                    <div className="h-40 w-full bg-gray-100 overflow-hidden flex items-center justify-center">
                       {post.mainImage?.asset?.url ? (
                         <Image
                           src={post.mainImage.asset.url}

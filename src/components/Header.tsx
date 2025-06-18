@@ -4,11 +4,84 @@ import { Menu } from "lucide-react";
 
 function Header() {
   return (
-    <>
-      <div className="w-full bg-lime-700 text-white text-xs py-1 px-4 flex gap-4 justify-end">
-        <Link href="https://www.gov.br/" target="_blank" rel="noopener noreferrer" className="hover:underline">Portal Gov.br</Link>
-        <Link href="https://www.ufrn.br/" target="_blank" rel="noopener noreferrer" className="hover:underline">UFRN</Link>
-      </div>
+    <div className="header">
+      <nav
+        className="w-full text-xs py-1 px-4 flex items-center justify-between"
+        id="top-bar"
+      >
+        <Link
+          href="https://www.gov.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 hover:underline"
+        >
+          <Image
+            src="https://flagsapi.com/BR/flat/24.png"
+            alt="Bandeira do Brasil"
+            width={24}
+            height={16}
+          />
+          Brasil
+        </Link>
+
+        <div className="flex gap-5">
+          <Link
+            href="https://www.gov.br/fazenda/pt-br/canais_atendimento/ouvidoria/simplifique"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+            title="Simplifique - Canal de Ouvidoria do Governo Federal"
+          >
+            Simplifique!
+          </Link>
+          <Link
+            href="https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+            title="Comunica BR - Portal de Comunicação do Governo Federal"
+          >
+            Comunica BR
+          </Link>
+          <Link
+            href="https://www.gov.br/pt-br/participacao-social"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+            title="Participação Social - Portal de Participação do Governo Federal"
+          >
+            Participe
+          </Link>
+          <Link
+            href="https://www.gov.br/acessoainformacao"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+            title="Acesso à Informação - Portal de Acesso à Informação do Governo Federal"
+          >
+            Acesso à informação
+          </Link>
+          <Link
+            href="https://www4.planalto.gov.br/legislacao"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+            title="Legislação - Portal de Legislação do Governo Federal"
+          >
+            Legislação
+          </Link>
+          <Link
+            href="https://www.gov.br/pt-br/canais-do-executivo-federal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+            title="Canais do Executivo Federal - Portal de Canais do Governo Federal"
+          >
+            Canais
+          </Link>
+        </div>
+      </nav>
+
       <nav className="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -25,24 +98,24 @@ function Header() {
             </div>
             <div className="hidden md:block">
               <nav aria-label="Global">
-                <ul className="flex items-center gap-6 text-sm">
+                <ul className="flex items-center gap-6 text-md">
                   <li>
-                    <Link className="text-gray-500 transition hover:text-lime-500/75" href="/">Início</Link>
+                    <Link href="/">Início</Link>
                   </li>
                   <li>
-                    <Link className="text-gray-500 transition hover:text-lime-500/75" href="/sobre">Sobre nós</Link>
+                    <Link href="/sobre">Sobre nós</Link>
                   </li>
                   <li>
-                    <Link className="text-gray-500 transition hover:text-lime-500/75" href="/voluntarios">Seja voluntário</Link>
+                    <Link href="/voluntarios">Seja voluntário</Link>
                   </li>
                   <li>
-                    <Link className="text-gray-500 transition hover:text-lime-500/75" href="/servicos">Serviços</Link>
+                    <Link href="/servicos">Serviços</Link>
                   </li>
                   <li>
-                    <Link className="text-gray-500 transition hover:text-lime-500/75" href="/projetos">Projetos</Link>
+                    <Link href="/projetos">Projetos</Link>
                   </li>
                   <li>
-                    <Link className="text-gray-500 transition hover:text-lime-500/75" href="/blog">Blog</Link>
+                    <Link href="/blog">Blog</Link>
                   </li>
                 </ul>
               </nav>
@@ -61,7 +134,7 @@ function Header() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 
