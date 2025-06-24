@@ -1,6 +1,7 @@
 @use "tailwindcss";
 
 $lasa: #004c20;
+$lasa-gray: #dfdfdf;
 $dm-serif-display: "DM Serif Display", serif;
 $dm-sans: "DM Serif Text", sans-serif;
 $open-sans: "Open Sans", sans-serif;
@@ -43,6 +44,17 @@ body {
     font-family: $dm-sans;
   }
 
+  .dm-serif-display {
+    font-family: $dm-serif-display;
+  }
+  .dm-sans {
+    font-family: $dm-sans;
+  }
+
+  .card {
+    background-color: $lasa-gray;
+  }
+
   #button-primary {
     color: $lasa;
     text-decoration: underline;
@@ -55,7 +67,7 @@ body {
       border: white 1px solid;
     }
   }
-  
+
   #button-secondary {
     color: white;
     text-decoration: underline;
@@ -73,17 +85,21 @@ body {
 .header {
   font-family: $dm-serif-display;
 
-  Link:hover {
-    color: $lasa;
-  }
-
   #top-bar {
     font-family: $open-sans;
     background-color: #f1f1f1;
-    border: #606060 1px solid;
+    border-bottom: #60606042 1px solid;
 
-    Link {
-      border-right: #606060 1px solid;
+    .link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      box-sizing: border-box;
+      border-right: #60606042 1px solid;
+      padding: 0 0.5rem;
+    }
+    .link:last-child {
+      border-right: none;
     }
   }
 }

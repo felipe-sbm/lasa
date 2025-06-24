@@ -6,14 +6,14 @@ function Header() {
   return (
     <div className="header">
       <nav
-        className="w-full text-xs py-1 px-4 flex items-center justify-between"
+        className="w-full text-xs px-6 flex items-center justify-between"
         id="top-bar"
       >
         <Link
           href="https://www.gov.br/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:underline"
+          className="flex items-center gap-2 hover:underline link"
         >
           <Image
             src="https://flagsapi.com/BR/flat/24.png"
@@ -29,7 +29,7 @@ function Header() {
             href="https://www.gov.br/fazenda/pt-br/canais_atendimento/ouvidoria/simplifique"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline link"
             title="Simplifique - Canal de Ouvidoria do Governo Federal"
           >
             Simplifique!
@@ -38,7 +38,7 @@ function Header() {
             href="https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline link"
             title="Comunica BR - Portal de Comunicação do Governo Federal"
           >
             Comunica BR
@@ -47,7 +47,7 @@ function Header() {
             href="https://www.gov.br/pt-br/participacao-social"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline link"
             title="Participação Social - Portal de Participação do Governo Federal"
           >
             Participe
@@ -56,7 +56,7 @@ function Header() {
             href="https://www.gov.br/acessoainformacao"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline link"
             title="Acesso à Informação - Portal de Acesso à Informação do Governo Federal"
           >
             Acesso à informação
@@ -65,7 +65,7 @@ function Header() {
             href="https://www4.planalto.gov.br/legislacao"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline link"
             title="Legislação - Portal de Legislação do Governo Federal"
           >
             Legislação
@@ -74,7 +74,7 @@ function Header() {
             href="https://www.gov.br/pt-br/canais-do-executivo-federal"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline link"
             title="Canais do Executivo Federal - Portal de Canais do Governo Federal"
           >
             Canais
