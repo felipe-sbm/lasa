@@ -35,15 +35,15 @@ export default function BlogPosts({ posts }: BlogPostsProps) {
               href={`/posts/${post.id}`}
               className={
                 idx === 0
-                  ? "min-w-[340px] max-w-lg bg-white card transition flex-shrink-0"
-                  : "min-w-[260px] max-w-xs bg-white card transition flex-shrink-0"
+                  ? "min-w-[10rem] max-w-xl bg-white card transition flex-shrink-0"
+                  : "min-w-[8rem] max-w-md bg-white card transition flex-shrink-0"
               }
             >
               <div
                 className={
                   idx === 0
                     ? "h-56 w-full bg-gray-100 overflow-hidden flex items-center justify-center"
-                    : "h-40 w-full bg-gray-100 overflow-hidden flex items-center justify-center"
+                    : "h-56 w-full bg-gray-100 overflow-hidden flex items-center justify-center"
                 }
               >
                 {post.images?.[0]?.url ? (
@@ -79,6 +79,15 @@ export default function BlogPosts({ posts }: BlogPostsProps) {
                     {post.published.slice(0, 10).split("-").reverse().join("/")}
                   </p>
                 )}
+                <p
+                  className={
+                    idx === 0
+                      ? "text-gray-700 mb-4"
+                      : "text-gray-600 text-sm"
+                  }
+                >
+                  {post.description || "Descrição não disponível."}
+                </p>
                 <p className="text underline">Acesse →</p>
               </div>
             </Link>

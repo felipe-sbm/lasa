@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, DM_Serif_Text } from "next/font/google";
+import BackgroundWrapper from "@/components/BackgroundWrapper";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.scss";
@@ -16,11 +17,10 @@ const dmSerifText = DM_Serif_Text({
   weight: "400",
 });
 
-
 export const metadata: Metadata = {
   title: "Laboratório de Soluções Ambientais",
   description:
-    "O Laboratório de Soluções Ambientais (LaSA) na Escola de Ciências & Tecnologia da Universidade Federal do Rio Grande do Norte (UFRN).",
+    "O Laboratório de Soluções Ambientais (LASA) na Escola de Ciências & Tecnologia da Universidade Federal do Rio Grande do Norte (UFRN).",
 };
 
 export default function RootLayout({
@@ -33,11 +33,11 @@ export default function RootLayout({
       <body
         className={`${dmSerifDisplay.variable} ${dmSerifText.variable} antialiased`}
       >
-        <div>
+        <BackgroundWrapper>
           <Header />
           {children}
           <Footer />
-        </div>
+        </BackgroundWrapper>
       </body>
     </html>
   );

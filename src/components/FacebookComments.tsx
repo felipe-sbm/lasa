@@ -2,7 +2,11 @@
 
 import { useEffect } from "react";
 
-const FacebookComments = () => {
+type FacebookCommentsProps = {
+  postId: string;
+};
+
+const FacebookComments = ({ postId }: FacebookCommentsProps) => {
   useEffect(() => {
     const script = document.createElement("script");
     script.async = true;
@@ -20,7 +24,7 @@ const FacebookComments = () => {
   return (
     <div
       className="fb-comments"
-      data-href="https://seusite.com/pagina"
+      data-href={`https://seusite.com/posts/${postId}`}
       data-width="100%"
       data-numposts="5"
       data-colorscheme="dark"

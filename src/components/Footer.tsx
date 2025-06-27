@@ -3,7 +3,7 @@ import { Instagram } from "lucide-react";
 
 function Footer() {
   return (
-    <footer className="bg-whit">
+    <footer className="antialased">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div className="mx-auto max-w-sm lg:max-w-none">
@@ -33,7 +33,7 @@ function Footer() {
             <div className="w-full flex justify-center">
             <div className="w-full max-w-md px-4">
               <strong className="block text-right text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">
-              Quer ser informado das últimas novidades da LASA?
+              Quer ser informado das últimas novidades do LASA?
               </strong>
 
               <form className="mt-6">

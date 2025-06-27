@@ -1,4 +1,4 @@
-import { getPosts } from "@/lib/blogger";
+import { getPosts } from "@/lib/bloggerPosts";
 import Image from "next/image";
 import Link from "next/link";
 import BlogPosts from "@/components/BlogPosts";
@@ -7,9 +7,9 @@ export default async function HomePage() {
   const posts = await getPosts();
 
   return (
-    <main className="relative p-6 min-h-screen">
+    <main className="mx-auto relative p-6 max-w-[120rem]">
       <section>
-        <div className="mx-auto pb-5">
+        <div className="antialased pb-5">
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <div className="bg-lasa p-8 md:p-12 lg:px-16 lg:py-24">
               <div className="flex items-center justify-center h-full min-h-[300px]">
@@ -60,7 +60,7 @@ export default async function HomePage() {
       </section>
 
       <div className="mx-auto">
-        <BlogPosts posts={posts} />
+        <BlogPosts posts={posts.slice(0, 5)} />
       </div>
     </main>
   );

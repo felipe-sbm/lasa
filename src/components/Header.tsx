@@ -5,80 +5,80 @@ import { Menu } from "lucide-react";
 function Header() {
   return (
     <div className="header">
-      <nav
-        className="w-full text-xs px-6 flex items-center justify-between"
-        id="top-bar"
-      >
-        <Link
-          href="https://www.gov.br/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 hover:underline link"
-        >
-          <Image
-            src="https://flagsapi.com/BR/flat/24.png"
-            alt="Bandeira do Brasil"
-            width={24}
-            height={16}
-          />
-          Brasil
-        </Link>
+      <nav className="w-full px-6 items-center" id="top-bar">
+        <div className="mx-auto max-w-[120rem] mt-1 text-xs flex items-center justify-between">
+          <Link
+            href="https://www.gov.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 hover:underline link topbar-content"
+          >
+            <Image
+              src="https://flagsapi.com/BR/flat/24.png"
+              alt="Bandeira do Brasil"
+              width={24}
+              height={16}
+              className="topbar-content"
+            />
+            <p className="topbar-content">Brasil</p>
+          </Link>
 
-        <div className="flex gap-5">
-          <Link
-            href="https://www.gov.br/fazenda/pt-br/canais_atendimento/ouvidoria/simplifique"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline link"
-            title="Simplifique - Canal de Ouvidoria do Governo Federal"
-          >
-            Simplifique!
-          </Link>
-          <Link
-            href="https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline link"
-            title="Comunica BR - Portal de Comunicação do Governo Federal"
-          >
-            Comunica BR
-          </Link>
-          <Link
-            href="https://www.gov.br/pt-br/participacao-social"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline link"
-            title="Participação Social - Portal de Participação do Governo Federal"
-          >
-            Participe
-          </Link>
-          <Link
-            href="https://www.gov.br/acessoainformacao"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline link"
-            title="Acesso à Informação - Portal de Acesso à Informação do Governo Federal"
-          >
-            Acesso à informação
-          </Link>
-          <Link
-            href="https://www4.planalto.gov.br/legislacao"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline link"
-            title="Legislação - Portal de Legislação do Governo Federal"
-          >
-            Legislação
-          </Link>
-          <Link
-            href="https://www.gov.br/pt-br/canais-do-executivo-federal"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline link"
-            title="Canais do Executivo Federal - Portal de Canais do Governo Federal"
-          >
-            Canais
-          </Link>
+          <div className="flex gap-2">
+            <Link
+              href="https://www.gov.br/fazenda/pt-br/canais_atendimento/ouvidoria/simplifique"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline link topbar-content"
+              title="Simplifique - Canal de Ouvidoria do Governo Federal"
+            >
+              Simplifique!
+            </Link>
+            <Link
+              href="https://www.gov.br/secom/pt-br/acesso-a-informacao/comunicabr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline link topbar-content"
+              title="Comunica BR - Portal de Comunicação do Governo Federal"
+            >
+              Comunica BR
+            </Link>
+            <Link
+              href="https://www.gov.br/pt-br/participacao-social"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline link topbar-content"
+              title="Participação Social - Portal de Participação do Governo Federal"
+            >
+              Participe
+            </Link>
+            <Link
+              href="https://www.gov.br/acessoainformacao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline link topbar-content"
+              title="Acesso à Informação - Portal de Acesso à Informação do Governo Federal"
+            >
+              Acesso à informação
+            </Link>
+            <Link
+              href="https://www4.planalto.gov.br/legislacao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline link topbar-content"
+              title="Legislação - Portal de Legislação do Governo Federal"
+            >
+              Legislação
+            </Link>
+            <Link
+              href="https://www.gov.br/pt-br/canais-do-executivo-federal"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline link topbar-content"
+              title="Canais do Executivo Federal - Portal de Canais do Governo Federal"
+            >
+              Canais
+            </Link>
+          </div>
         </div>
       </nav>
 
