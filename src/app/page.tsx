@@ -59,7 +59,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <div className="mx-auto">
+      <div className="relative mx-auto">
         <BlogPosts posts={posts.slice(0, 5)} />
       </div>
     </main>

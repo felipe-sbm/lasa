@@ -6,7 +6,7 @@ export default function BackgroundWrapper({ children }: { children: React.ReactN
   const isPostPage = /^\/posts\/[^/]+$/.test(pathname);
 
   return (
-    <div className={isPostPage ? "bg-amber-50 min-h-screen" : ""}>
+    <div className={isPostPage ? "bg-white min-h-screen" : ""}>
       {children}
     </div>
   );
