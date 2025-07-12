@@ -15,7 +15,14 @@ export default async function BlogPage() {
 
   return (
     <main className="max-w-7xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-8 title-lasa">Blog do LASA</h1>
+      <h1 className="text-3xl font-bold">Blog do LASA</h1>
+      <p className="mb-4 text-gray-600 mb-8">
+        lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat
+      </p>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {posts.map((post: Post) => (
           <article
@@ -56,6 +63,7 @@ export default async function BlogPage() {
           </article>
         ))}
       </div>
+      <hr className="mt-8" />
     </main>
   );
 }
