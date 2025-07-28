@@ -1,0 +1,242 @@
+@use "tailwindcss";
+
+$lasa: #004c20;
+$lasa-gray: #dfdfdf;
+$dm-serif-display: "DM Serif Display", serif;
+$dm-sans: "DM Serif Text", sans-serif;
+$open-sans: "Open Sans", sans-serif;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-dm-serif-display: $dm-serif-display;
+  --font-dm-serif-text: $dm-sans;
+}
+
+/* Modo escuro desativado temporariamente (UI não concluída)
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --font-mono: 'Droid Sans Mono', 'monospace', monospace;
+  }
+}
+*/
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: $dm-sans;
+
+  .bg-lasa {
+    background-color: $lasa !important;
+    color: #fff;
+  }
+
+  .title-lasa {
+    color: $lasa;
+    font-family: $dm-serif-display;
+  }
+  .text-lasa {
+    color: $lasa;
+    font-family: $dm-sans;
+  }
+
+  .dm-serif-display {
+    font-family: $dm-serif-display;
+  }
+  .dm-sans {
+    font-family: $dm-sans;
+  }
+
+  .card {
+    background-color: $lasa-gray;
+  }
+
+  #button-primary {
+    color: $lasa;
+    text-decoration: underline;
+    background-color: white;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: white;
+      background-color: transparent;
+      border: white 1px solid;
+    }
+  }
+
+  #button-secondary {
+    color: white;
+    text-decoration: underline;
+    background-color: $lasa;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      color: $lasa;
+      background-color: transparent;
+      border: $lasa 1px solid;
+    }
+  }
+}
+
+.header {
+  font-family: $dm-serif-display;
+
+  #top-bar {
+    font-family: $open-sans;
+    background-color: #f1f1f1;
+    border-bottom: #60606042 1px solid;
+    overflow: hidden;
+    height: 2rem;
+
+    .topbar-content {
+      opacity: 0;
+      transform: translateY(-10px);
+      animation: topbar-fade-in 0.8s ease-out 0.2s forwards;
+      height: auto;
+      width: auto;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      box-sizing: border-box;
+      border-right: #60606042 1px solid;
+      padding: 0 0.5rem;
+    }
+  }
+
+  @keyframes topbar-fade-in {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.prose {
+  max-width: 100%;
+  color: #171717;
+  line-height: 1.75;
+  font-size: 1.125rem;
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 800;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  h4 {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+  }
+
+  ul,
+  ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    padding-left: 2em;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  li {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  a {
+    color: #2563eb;
+    text-decoration: underline;
+    transition: color 0.2s;
+    &:hover {
+      color: #1d4ed8;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -1.5rem;
+    max-width: 25rem;
+    border-radius: 0.5rem;
+  }
+
+  blockquote {
+    border-left: 4px solid #d1d5db;
+    padding-left: 1em;
+    color: #6b7280;
+    font-style: italic;
+    margin: 1.5em 0;
+  }
+
+  code {
+    background: #f3f4f6;
+    color: #d97706;
+    padding: 0.2em 0.4em;
+    border-radius: 0.25rem;
+    font-size: 0.95em;
+  }
+
+  pre {
+    background: #f3f4f6;
+    padding: 1em;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-size: 0.95em;
+    margin: 1.5em 0;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+  }
+
+  th,
+  td {
+    border: 1px solid #e5e7eb;
+    padding: 0.5em 1em;
+  }
+
+  th {
+    background: #f3f4f6;
+    font-weight: 600;
+  }
+}
