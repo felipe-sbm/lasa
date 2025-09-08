@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Instagram } from "lucide-react";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -26,38 +27,71 @@ function Footer() {
               >
                 <span className="sr-only"> Instagram </span>
                 <Instagram className="size-6" />
-              </Link>
+              </Link>{" "}
+              <p>Confira nosso Instagram!</p>
             </div>
           </div>
 
-            <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center">
             <div className="w-full max-w-md px-4">
               <strong className="block text-right text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl">
-              Quer ser informado das últimas novidades do LASA?
+                Quer ser informado das últimas novidades do LASA?
               </strong>
 
               <form className="mt-6">
-              <div className="relative">
-                <label className="sr-only" htmlFor="email">
-                Email
-                </label>
-                <input
-                className="w-full border border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-lime-600"
-                id="email"
-                type="email"
-                placeholder="seu@email.com.br"
-                />
-                <button
-                type="submit"
-                id="button-secondary"
-                className="absolute right-2 top-1/2 -translate-y-1/2 px-5 py-2 text-sm font-medium text-white transition hover:bg-lime-700"
-                >
-                Inscrever-se
-                </button>
-              </div>
+                <div className="relative">
+                  <label className="sr-only" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    className="w-full border border-gray-200 bg-gray-100 p-4 pr-32 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-lime-600"
+                    id="email"
+                    type="email"
+                    placeholder="seu@email.com.br"
+                  />
+                  <button
+                    type="submit"
+                    id="button-secondary"
+                    className="absolute right-2 top-1/2 -translate-y-1/2 px-5 py-2 text-sm font-medium text-white transition hover:bg-lime-700"
+                  >
+                    Inscrever-se
+                  </button>
+                </div>
               </form>
             </div>
-            </div>
+          </div>
+        </div>
+
+        <div className="mt-4 py-2">
+          <div className="flex gap-4 items-center justify-center">
+            <Link href="https://ufrn.br">
+              <Image
+                alt="Brasão da UFRN"
+                width={90}
+                height={90}
+                src={"/brasao.webp"}
+                className="transition duration-500 hover:opacity-75"
+              />
+            </Link>
+            <Link href="https://ect.ufrn.br">
+              <Image
+                alt="Logo da Escola de Ciências & Tecnologia"
+                width={160}
+                height={160}
+                src={"/ect.webp"}
+                className="transition duration-500 hover:opacity-75"
+              />
+            </Link>
+            <Link href="/">
+              <Image
+                alt="Logo da Escola de Ciências & Tecnologia"
+                width={120}
+                height={120}
+                src={"/lasa.svg"}
+                className="transition duration-500 hover:opacity-75"
+              />
+            </Link>
+          </div>
         </div>
 
         <div className="mt-4 border-t border-gray-100 pt-">
