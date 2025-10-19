@@ -1,14 +1,24 @@
 import { getPostById } from "@/lib/blogger";
 import Image from "next/image";
-import FacebookCommentsSimple from "@/components/FacebookCommentsSimple";
+import { notFound } from "next/navigation";
 
 type PageProps = {
-  params: { id: string };
+  params: Promise<unknown>;
 };
 
 export default async function PostPage(props: PageProps) {
   const params = await props.params;
-  const { id } = params;
+  // Validação runtime: garantir que params seja um objeto com id string
+  if (!params || typeof params !== "object") {
+    notFound();
+  }
+
+  const maybeId = (params as Record<string, unknown>)['id'];
+  if (!maybeId || typeof maybeId !== "string") {
+    notFound();
+  }
+
+  const id = maybeId as string;
   const post = await getPostById(id);
 
   if (!post) return <div className="text-lasa">Post não encontrado</div>;
@@ -39,9 +49,7 @@ export default async function PostPage(props: PageProps) {
             <p className="text-xs text-gray-500">{post.published}</p>
           </div>
         </div>
-        <div className="mt-8">
-          <FacebookCommentsSimple postId={post.id} />
-        </div>
+        {/* comentários removidos para página minimalista */}
       </div>
     </article>
   );

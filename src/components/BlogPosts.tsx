@@ -89,9 +89,7 @@ export default function BlogPosts({ posts }: BlogPostsProps) {
                 {post.description || "Descrição não disponível."}
               </p>
               <div className="flex-grow" />
-              <Link href={`/posts/${post.id}`} className="text underline block mt-2">
-                Acesse →
-              </Link>
+                <span className="text underline block mt-2">Acesse →</span>
               </div>
             </Link>
           ))}

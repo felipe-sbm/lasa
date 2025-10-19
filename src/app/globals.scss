@@ -91,6 +91,21 @@ body {
     border-bottom: #60606042 1px solid;
     overflow: hidden;
     height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Adjust for widths below 1800px */
+    @media (max-width: 1800px) {
+      height: auto;
+      min-height: 2rem;
+      padding: 0.25rem 0.5rem;
+    }
+
+    /* Further adjust for small screens */
+    @media (max-width: 640px) {
+      padding: 0.5rem 0.25rem;
+    }
 
     .topbar-content {
       opacity: 0;
@@ -100,6 +115,29 @@ body {
       width: auto;
     }
 
+    /* Inner container (the div with max-w-[120rem]) */
+    > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 0.5rem;
+
+      /* Stack and center on medium-small screens */
+      @media (max-width: 1200px) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem;
+      }
+
+      /* Full stack on mobile */
+      @media (max-width: 640px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+
     .link {
       display: flex;
       align-items: center;
@@ -107,6 +145,26 @@ body {
       box-sizing: border-box;
       border-right: #60606042 1px solid;
       padding: 0 0.5rem;
+      white-space: nowrap;
+      font-size: 0.75rem;
+
+      @media (max-width: 1800px) {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.7rem;
+      }
+
+      @media (max-width: 1200px) {
+        padding: 0.2rem 0.3rem;
+        font-size: 0.65rem;
+        border-right: none;
+      }
+
+      @media (max-width: 640px) {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        border-right: none;
+        justify-content: center;
+      }
     }
   }
 

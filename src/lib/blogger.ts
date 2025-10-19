@@ -21,18 +21,17 @@ export async function getPostById(id: string) {
   const imgMatch = item.content?.match(/<img[^>]+src="([^">]+)"/);
   const imageUrl = imgMatch ? imgMatch[1] : null;
 
+  // Gerar descrição a partir do conteúdo do post (plaintext)
   let description = "";
-  if (description) {
-    const plainText = description.replace(/<[^>]+>/g, "").slice(0, 120);
-    if (
-      plainText.endsWith(".") ||
-      plainText.endsWith("!") ||
-      plainText.endsWith("?") ||
-      plainText.endsWith(" ")
-    ) {
-      description = `"${plainText}"`;
+  const raw = item.content || item.title || "";
+  if (raw) {
+    const plainText = raw.replace(/<[^>]+>/g, "").trim().slice(0, 160);
+    if (plainText.length === 0) {
+      description = "";
+    } else if (/[.!?]$/.test(plainText) || plainText.length < 160) {
+      description = plainText;
     } else {
-      description = `"${plainText}..."`;
+      description = `${plainText.replace(/\s+$/,'')}...`;
     }
   }
 

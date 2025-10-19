@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className="antialased">
+  <footer className="antialiased">
       <div className="mx-auto max-w-screen-xl px-4 pt-16 pb-8 sm:px-6 lg:px-8">
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-32">
           <div className="mx-auto max-w-sm lg:max-w-none">
@@ -12,9 +12,9 @@ function Footer() {
               Laboratório de Soluções Ambientais
             </h1>
             <p className="mt-4 text-center text-gray-500 lg:text-left lg:text-lg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Praesentium natus quod eveniet aut perferendis distinctio iusto
-              repudiandae, provident velit earum?
+              O Laboratório de Soluções Ambientais (LASA) promove pesquisa e
+              ensino na área de recursos hídricos, com foco em soluções
+              sustentáveis e inovação.
             </p>
 
             <div className="mt-6 flex justify-center gap-4 lg:justify-start">
@@ -22,7 +22,7 @@ function Footer() {
                 className="text-black transition hover:text-green-700"
                 href="#"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 title="Instagram do laboratório"
               >
                 <span className="sr-only"> Instagram </span>

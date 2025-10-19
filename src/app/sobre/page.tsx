@@ -92,7 +92,7 @@ export default function SobrePage() {
               <Image
                 src="https://images.pexels.com/photos/3735747/pexels-photo-3735747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Pesquisa em laboratório"
-                className="rounded-lg shadow-lg object-cover"
+                className="object-cover"
                 width={600}
                 height={400}
               />
